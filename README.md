@@ -4,7 +4,7 @@ Wenn ihr es kaum erwarten könnt einen weiteren von BoraBoras Anwesenheitstests 
 Verpasst keinen Anwesenheitstest, indem ihr euch von der zarten Stimme BoraBoras auf Discord erinnern lasst, dass es mal wieder Zeit ist sich den schönen Seiten des Lebens zuzuwenden.
 
 # Usage
-
+```
 usage: boraborabot.py [-h] [--discord DISCORD] [--name NAME] [--passwd PASSWD] [--test] [--quiet]
                       [--noText] [--audio AUDIO]
 
@@ -20,3 +20,4 @@ optional arguments:
   --quiet            Deactivates the voice of BoraBora.
   --noText           Deactivates writing of BoraBora.
   --audio AUDIO      A folder with mp3 files to play from.
+  ```
