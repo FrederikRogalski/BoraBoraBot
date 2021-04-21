@@ -5,9 +5,7 @@ Verpasst keinen Anwesenheitstest, indem ihr euch von der zarten Stimme BoraBoras
 
 # Installation
 
-Benutzt diesen Link um den Bot auf einem Server eurer Wahl zu installieren.
-
-https://discord.com/api/oauth2/authorize?client_id=834381041644208170&permissions=3147776&scope=bot
+Benutzt diesen [Link](https://discord.com/api/oauth2/authorize?client_id=834381041644208170&permissions=3147776&scope=bot) um den Bot auf einem Server eurer Wahl zu installieren.
 
 # Usage
 ```
