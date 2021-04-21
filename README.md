@@ -3,6 +3,12 @@ Wenn ihr es kaum erwarten könnt einen weiteren von BoraBoras Anwesenheitstests 
 
 Verpasst keinen Anwesenheitstest, indem ihr euch von der zarten Stimme BoraBoras auf Discord erinnern lasst, dass es mal wieder Zeit ist sich den schönen Seiten des Lebens zuzuwenden.
 
+# Installation
+
+Benutzt diesen Link um den Bot auf einem Server eurer Wahl zu installieren.
+
+https://discord.com/api/oauth2/authorize?client_id=834381041644208170&permissions=3147776&scope=bot
+
 # Usage
 ```
 usage: boraborabot.py [-h] [--discord DISCORD] [--name NAME] [--passwd PASSWD] [--test] [--quiet]
