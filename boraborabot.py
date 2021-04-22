@@ -9,7 +9,7 @@ import re
 import asyncio
 import threading
 
-parser = argparse.ArgumentParser(description='Process some integers.')
+parser = argparse.ArgumentParser(description='Verpasst keinen Anwesenheitstest, indem ihr euch von der zarten Stimme BoraBoras auf Discord erinnern lasst, dass es mal wieder Zeit ist sich den schönen Seiten des Lebens zuzuwenden.')
 
 
 parser.add_argument('--discord', default=None, help='Enables Discord Bot. Needs Discord token.', type=str)
@@ -78,8 +78,8 @@ if args.discord != None:
         audio_source = discord.FFmpegPCMAudio(os.path.join(args.audio, mp3))
         while True:
             try:
-                await asyncio.sleep(1)
-                vc = await asyncio.wait_for(channel.connect(), 1.0)
+                time.sleep(1)
+                vc = await asyncio.wait_for(channel.connect(), 10.0)
                 break
             except:
                 print(f"connecting issues...{channel}")
@@ -89,7 +89,7 @@ if args.discord != None:
         while True:
             try:
                 await asyncio.sleep(1)
-                await asyncio.wait_for(vc.disconnect(), 1.0)
+                await asyncio.wait_for(vc.disconnect(), 10.0)
                 break
             except:
                 print(f"disconneceting issue{channel}")
@@ -121,6 +121,7 @@ if args.discord != None:
             for guild in client.guilds:
                 for channel in guild.text_channels:
                     text_channel_list.append(channel)
+                    break
                 for channel in guild.voice_channels:
                     voice_channel_list.append(channel)
                     break
