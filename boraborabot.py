@@ -40,7 +40,7 @@ class LandBot():
         time.sleep(0.5+random.random())
 
     def check(self):
-        found = re.findall('.nwesenheitstest ?[a-zA-Z0-9]*', self.driver.page_source)
+        found = re.findall('.nwesenheitstest ?[a-zA-Z0-9]+', self.driver.page_source)
         #import pdb; pdb.set_trace()
         new = [x for x in found if x not in self.allreadySeen]
         if len(new) > 0:
