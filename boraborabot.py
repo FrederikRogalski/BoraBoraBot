@@ -83,16 +83,18 @@ if args.discord != None:
                 break
             except:
                 print(f"connecting issues...{channel}")
+                return
         vc.play(audio_source)
         while vc.is_playing():
             await asyncio.sleep(1)
         while True:
             try:
-                await asyncio.sleep(1)
+                time.sleep(1)
                 await asyncio.wait_for(vc.disconnect(), 10.0)
                 break
             except:
-                print(f"disconneceting issue{channel}")
+                print(f"disconneceting issues...{channel}")
+                return 
         print("finished")
 
     async def distribute(channels):
