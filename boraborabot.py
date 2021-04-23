@@ -25,7 +25,7 @@ args = parser.parse_args()
 class LandBot():
     def __init__(self):
         self.driver = webdriver.Chrome()
-        self.allreadySeen = ['Anwesenheitstests']
+        self.allreadySeen = ['Anwesenheitstests', 'Anwesenheitstest 4a']
 
     def abfrage(self):
         self.driver.get(
@@ -40,7 +40,7 @@ class LandBot():
         time.sleep(0.5+random.random())
 
     def check(self):
-        found = re.findall('.nwesenheitstest[a-zA-Z0-9]*', self.driver.page_source)
+        found = re.findall('.nwesenheitstest ?[a-zA-Z0-9]*', self.driver.page_source)
         #import pdb; pdb.set_trace()
         new = [x for x in found if x not in self.allreadySeen]
         if len(new) > 0:
@@ -108,6 +108,7 @@ if args.discord != None:
     @client.event
     async def on_ready():
         print(f'{client.user} has connected to Discord!')
+        print("Connected channels:", client.guilds)
         if not args.test:
             bot = LandBot()
         while True:
