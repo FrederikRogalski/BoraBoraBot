@@ -8,6 +8,14 @@ from subprocess import Popen
 import re
 import asyncio
 import threading
+from selenium.webdriver.chrome.options import Options
+
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
+
+
 
 parser = argparse.ArgumentParser(description='Verpasst keinen Anwesenheitstest, indem ihr euch von der zarten Stimme BoraBoras auf Discord erinnern lasst, dass es mal wieder Zeit ist sich den schönen Seiten des Lebens zuzuwenden.')
 
@@ -24,7 +32,7 @@ args = parser.parse_args()
 
 class LandBot():
     def __init__(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome(options=chrome_options)
         self.allreadySeen = ['Anwesenheitstests', 'Anwesenheitstest 4a']
 
     def abfrage(self):
